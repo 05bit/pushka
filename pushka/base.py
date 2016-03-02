@@ -38,7 +38,7 @@ class BaseService:
 
         If service is running on Tornado IOLoop, then
         `tornado.httpclient.AsyncHTTPClient`_ is used. When asyncio event
-        loop is specified `aiohttp`_ client is used, in that case "aiohttp"
+        loop is specified `aiohttp`_ client is used, in that case aiohttp
         library is required to be installed.
 
         .. _aiohttp: http://aiohttp.readthedocs.org

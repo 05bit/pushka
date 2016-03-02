@@ -11,9 +11,9 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-"""Push notifications, SMS, and emails.
+"""Push notifications, SMS, and emails on top of asyncio.
 
-Runs on top of asyncio, so Python 3.3+ is required. Supported services:
+Supported services:
 
 - Email: Amazon SES
 - SMS: Twilio
@@ -23,20 +23,34 @@ Quickstart
 ----------
 
 If you are new to asyncio, please read some intro on it first! And here's a
-basic example for sending notification via Parse::
+basic example for sending email via Amazon SES::
 
-    >>> import asyncio
-    >>> import pushka
-    >>> parse_app_id = '***' # Paste real APP ID here
-    >>> parse_api_key = '***' # Paste real Rest API key here
-    >>> token = '***' # Paste device token here
-    >>> device_type = 'ios' # Or 'android'
-    >>> loop = asyncio.get_event_loop()
-    >>> run = loop.run_until_complete # Shortcut
-    >>> push = pushka.ParsePushService(parse_app_id, parse_api_key, asyncio_loop=loop)
-    >>> run(push.add_target(token=token, device_type=device_type))
-    >>> run(push.send(token=token, device_type=device_type, alert="La-la-la!"))
+    import asyncio
+    import pushka
 
+    # NOTE: client uses `SendEmail` method, so user's policy must grant
+    # `ses:SendEmail` permission.
+    access_id='***' # Amazon SES access ID
+    secret_key='***' # Amazon SES secret key
+
+    mail_to = ['to@example.com'] # Some email to receive mail
+    mail_from = 'from@example.com' # Sender's email address
+
+    loop = asyncio.get_event_loop()
+    run = loop.run_until_complete
+
+    mailer = AmazonSESService(
+        access_id=access_id,
+        secret_key=secret_key,
+        loop=loop)
+
+    run(mailer.send_mail(
+            text="Some text",
+            subject="Some subject",
+            recipients=mail_to,
+            sender=mail_from))
+
+.. _AmazonSES: https://aws.amazon.com/ses/
 .. _Twilio: https://www.twilio.com
 .. _Parse: https://parse.com
 

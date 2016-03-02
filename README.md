@@ -6,6 +6,16 @@ Push notifications, SMS, and emails on top of asyncio
 
     pip install pushka
 
+# Documentation
+
+Latest build on Read The Docs:
+
+    ...
+
+Build locally:
+
+    sphinx-build -b html docs docs/_build
+
 # Examples
 
 Using with **Tornado 4.3+** and **Python 3.5+**:

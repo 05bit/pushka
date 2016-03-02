@@ -28,6 +28,9 @@ logger = logging.getLogger('pushka.mail')
 
 class AmazonSESService(base.BaseMailService):
     """Amazon SES API client.
+
+    The client uses `SendEmail` method, so user's policy must grant
+    `ses:SendEmail` permission.
     """
     DEFAULT_BASE_URL = 'https://email.us-east-1.amazonaws.com'
 
