@@ -1,0 +1,14 @@
+[tests]
+parse_app_id = <Parse.com App ID>
+parse_app_key = <Parse.com App Key>
+
+push_token = <Device push token>
+push_device = ios
+
+push_alert = Test, ha-ha-ha!
+push_sound = default
+
+ses_access_id: <SES access key>
+ses_secret_key: <SES sected id>
+mail_to: <recepients(s) emails, comma separated>
+mail_from: <sender email>
