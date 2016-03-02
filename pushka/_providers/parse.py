@@ -26,6 +26,7 @@ class ParsePushService(base.BasePushService):
         app_id: Parse application ID
         api_key: Parse Rest API key for application
 
+    .. _Parse: https://parse.com
     """
     base_url = 'https://api.parse.com/1/'
 
@@ -47,6 +48,7 @@ class ParsePushService(base.BasePushService):
         See :meth:`.BasePushService.add_target` method docs for
         parameters reference.
 
+        .. _Parse: https://parse.com
         """
         url = ''.join((self.base_url, 'installations'))
 
@@ -77,6 +79,7 @@ class ParsePushService(base.BasePushService):
         See :meth:`.BasePushService.send_push` method docs
         for parameters reference.
 
+        .. _Parse: https://parse.com
         """
         url = ''.join((self.base_url, 'push'))
         data = {'data': {'alert': alert}}

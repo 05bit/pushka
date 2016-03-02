@@ -31,7 +31,7 @@ class TwilioSMSService(base.BaseSMSService):
     """
     url = 'https://api.twilio.com/2010-04-01/Accounts/{account}/Messages.json'
 
-    def __init__(self, account=None, token=None, loop=None, default_sender=None):
+    def __init__(self, *, loop, account, token, default_sender=None):
         super().__init__(loop=loop, default_sender=default_sender)
         self._account = account
         self._token = token

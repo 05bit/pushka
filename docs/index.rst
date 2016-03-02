@@ -8,6 +8,7 @@ pushka
 
 .. automodule:: pushka
 
+
 Contents
 --------
 
@@ -15,6 +16,7 @@ Contents
    :maxdepth: 2
 
    email
+   sms
    api
 
 

@@ -19,11 +19,18 @@ Supported services:
 - SMS: Twilio
 - Push notifications: Parse (deprecated)
 
+Install
+-------
+
+The easiest way is install via pip::
+
+    pip install pushka
+
 Quickstart
 ----------
 
 If you are new to asyncio, please read some intro on it first! And here's a
-basic example for sending email via Amazon SES::
+basic example for sending email message via Amazon SES::
 
     import asyncio
     import pushka

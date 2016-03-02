@@ -1,5 +1,5 @@
-Sending email
-=============
+Sending emails
+==============
 
 .. autoclass:: pushka.AmazonSESService
     :members:
