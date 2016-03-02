@@ -1,6 +1,6 @@
 # pushka
 
-Push notifications, SMS, and emails on top of asyncio
+Push notifications, SMS and emails on top of asyncio.
 
 # Install
 
@@ -9,7 +9,6 @@ Push notifications, SMS, and emails on top of asyncio
 # Documentation
 
 Read docs online:
-
 http://pushka.readthedocs.org/en/latest/
 
 or build locally:

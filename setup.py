@@ -1,4 +1,4 @@
-"""Push notifications, SMS, and emails on top of asyncio
+"""Push notifications, SMS and emails on top of asyncio
 """
 import os
 from setuptools import setup, find_packages
@@ -27,6 +27,7 @@ setup(
     license='Apache-2.0',
     zip_safe=False,
     packages=find_packages(),
+    keywords='asyncio email sms push notifications sender',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Environment :: Web Environment',
