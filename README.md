@@ -8,11 +8,11 @@ Push notifications, SMS, and emails on top of asyncio
 
 # Documentation
 
-Latest build on Read The Docs:
+Read docs online:
 
-    ...
+http://pushka.readthedocs.org/en/latest/
 
-Build locally:
+or build locally:
 
     sphinx-build -b html docs docs/_build
 
